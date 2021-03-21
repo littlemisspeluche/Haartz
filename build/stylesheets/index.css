@@ -36,20 +36,20 @@ body {
   width: 100%;
   height: 100%;
 }
-.column-1 .right-side-images #right-center-img img {
+.column-1 .right-side-images #right-bottom-img, .column-1 .right-side-images #right-center-bottom-img, .column-1 .right-side-images #right-center-img {
   position: absolute;
+}
+.column-1 .right-side-images #right-center-img img {
   left: 40%;
   bottom: 80%;
   width: 65%;
 }
 .column-1 .right-side-images #right-center-bottom-img img {
-  position: absolute;
   width: 35%;
   left: 75%;
   top: 15%;
 }
 .column-1 .right-side-images #right-bottom-img img {
-  position: absolute;
   width: 85%;
   top: 32%;
   left: 5%;
@@ -63,9 +63,11 @@ body {
 .column-2 .main-shapes {
   width: 100%;
 }
+.column-2 .main-shapes #heart-shape, .column-2 .main-shapes #main-shaving-shape {
+  position: absolute;
+}
 .column-2 .main-shapes #heart-shape {
   width: 11%;
-  position: absolute;
   top: 69%;
   left: 41%;
 }
@@ -74,7 +76,6 @@ body {
 }
 .column-2 .main-shapes #main-shaving-shape {
   width: 20%;
-  position: absolute;
   top: 60%;
   left: 68%;
 }
@@ -87,9 +88,11 @@ body {
   height: 100%;
   position: relative;
 }
+.column-3 #left-center-img, .column-3 #left-bottom-img {
+  position: absolute;
+}
 .column-3 #left-center-img {
   width: 100%;
-  position: absolute;
   top: 32%;
   left: 10%;
 }
@@ -98,7 +101,6 @@ body {
 }
 .column-3 #left-bottom-img {
   width: 100%;
-  position: absolute;
   top: 60%;
   left: 15%;
 }
