@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "spotify";
+  src: url("fonts/OpenSansHebrew-Bold.ttf") format("OpenSansHebrew-Bold"), url("OpenSansHebrew-BoldItalic.ttf") format("OpenSansHebrew-BoldItalic"), url("OpenSansHebrew-ExtraBold.ttf") format("OpenSansHebrew-ExtraBold"), url("OpenSansHebrew-ExtraBoldItalic.ttf") format("OpenSansHebrew-ExtraBoldItalic"), url("OpenSansHebrew-Italic.ttf") format("OpenSansHebrew-Italic"), url("OpenSansHebrew-Light.ttf") format("OpenSansHebrew-Light"), url("OpenSansHebrew-LightItalic.ttf") format("OpenSansHebrew-LightItalic"), url("OpenSansHebrew-Regular.ttf") format("OpenSansHebrew-Regular");
+}
+body {
+  margin: 0;
+}
+
+.text-container {
+  font-family: "OpenSansHebrew-Regular";
+  font-size: 1.2rem;
+  text-align: right;
+  margin: 7% 25%;
+  width: 45%;
+}
+
+.top {
+  background-color: #f7161e;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 22% 50% 22% 6%;
+  flex-grow: 1;
+}
+
+.column-1 {
+  width: 100%;
+  height: 100%;
+}
+.column-1 #right-top-img img {
+  width: 60%;
+}
+.column-1 .right-side-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.column-1 .right-side-images #right-bottom-img, .column-1 .right-side-images .column-1 #right-center-bottom-img, .column-1 .right-side-images .column-1 #right-center-img {
+  width: 100%;
+}
+.column-1 .right-side-images #right-center-img img {
+  position: absolute;
+  left: 40%;
+  bottom: 80%;
+  width: 65%;
+}
+.column-1 .right-side-images #right-center-bottom-img img {
+  position: absolute;
+  width: 35%;
+  left: 75%;
+  top: 15%;
+}
+.column-1 .right-side-images #right-bottom-img img {
+  position: absolute;
+  width: 85%;
+  top: 32%;
+  left: 5%;
+}
+
+.column-2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.column-2 .main-shapes {
+  width: 100%;
+}
+.column-2 .main-shapes #heart-shape {
+  width: 11%;
+  position: absolute;
+  top: 69%;
+  left: 41%;
+}
+.column-2 .main-shapes #heart-shape img {
+  width: 100%;
+}
+.column-2 .main-shapes #main-shaving-shape {
+  width: 20%;
+  position: absolute;
+  top: 60%;
+  left: 68%;
+}
+.column-2 .main-shapes #main-shaving-shape img {
+  width: 100%;
+}
+
+.column-3 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.column-3 #left-center-img {
+  width: 100%;
+  position: absolute;
+  top: 32%;
+  left: 10%;
+}
+.column-3 #left-center-img img {
+  width: 80%;
+}
+.column-3 #left-bottom-img {
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  left: 15%;
+}
+.column-3 #left-bottom-img img {
+  width: 50%;
+}
+
+.column-4 img {
+  height: 100%;
+  width: 100%;
+}
+
+svg .highlight {
+  transition: all 0.8s ease;
+  animation-duration: 4s;
+}
+
+.highlights {
+  animation-name: fill;
+  fill-opacity: 0.8;
+}
+
+.no-highlights {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+@keyframes fill {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .column-4,
+.column-1 #right-top-img,
+.column-1 #right-center-img,
+.column-1 #right-center-img,
+.column-1 #right-center-bottom-img,
+.column-3 #left-bottom-img {
+    display: none;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top {
+    display: block;
+  }
+
+  .column-2 {
+    order: 1;
+  }
+
+  .column-3 {
+    order: 2;
+  }
+  .column-3 #left-center-img {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+  .column-3 #left-center-img img {
+    float: right;
+    width: 60%;
+  }
+
+  .column-1 {
+    order: 3;
+  }
+  .column-1 .right-side-images #right-bottom-img {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+  .column-1 .right-side-images #right-bottom-img img {
+    width: 60%;
+    position: relative;
+    left: 0;
+  }
+
+  .text-container {
+    margin: 3rem auto;
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
